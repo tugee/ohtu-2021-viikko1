@@ -45,7 +45,7 @@ class TestVarasto(unittest.TestCase):
 
     def test_not_take_overamount(self):
         self.varasto.ota_varastosta(12)
-        self.assertAlmostEqual(self.varasto.saldo,0)
+        self.assertAlmostEqual(self.varasto.saldo,0+1)
 
     def test_valid_volume(self):
         self.varasto = Varasto(-1)
