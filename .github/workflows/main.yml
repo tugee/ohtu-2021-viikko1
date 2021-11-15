@@ -27,6 +27,6 @@ jobs:
       - name: Coverage report to Codecov
         run: bash <(curl -s https://codecov.io/bash)
       - name: Analysing the code with pylint
-        run: pylint `ls -R|grep .py$|xargs`
+        run: poetry run pylint src
 
 
